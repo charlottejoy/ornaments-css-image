@@ -1,6 +1,8 @@
 $light: #F7F7F7;
 $main: #F72412;
 $shadow:#040358;
+$container-height: 45vw;
+
 $ornament1-top: 20%;
 $ornament1-left: 10%;
 $ornament1-width: 25%;
@@ -12,13 +14,19 @@ $ornament1-width: 25%;
 body {
 background: $light;
   overflow: hidden;
+  /* display: flex;
+   align-items: center;
+  justify-content: center;
+  height: 100%;
+   min-height: 100%;*/
 }
 .container{
-    height:45vw;
+    height:$container-height;
   width: 90vw;
  margin: auto;
   position: relative;
-//border: 2px solid black;
+  //top: ((100vh-$container-height)/2)*.75;
+border: 2px solid black;
 }
 .circle{
   border-radius: 50%;
@@ -70,21 +78,7 @@ background: $light;
   height:$ornament1-top*.5+ 90%;
   left: $ornament1-left*6+ $ornament1-width/2-.25%;
 }
-.ornament{
-   @extend .circle;
-  top: 20%;
-  left:10%;
-  height: 80%;
-  width: 80%;
-  overflow: hidden;
-  background: $light;
-  .dot-row{
-    top: 25%;
-  left: 0%;
-  //  background: $main;
-  }
-  .dot{background: $main;}
-}
+
 .hanger{
   background: $shadow;
   position: absolute;
@@ -120,6 +114,34 @@ background: $light;
     width: 60%;
   height: 60%;
 }
+.ornament{
+   @extend .circle;
+  top: 20%;
+  left:10%;
+  height: 80%;
+  width: 80%;
+  overflow: hidden;
+  background: $light;
+  .dot-row{
+    top: 15%;
+  left: 0%;
+  
+  }
+  .dot-row2{
+  top: 40%;
+  left: 0%;
+  }
+  .dot-row3{
+    top:65%;
+    left: 0;
+  }
+  .dot-row4{
+    top: 90%;
+    left: 0%;
+  }
+  
+  .dot{background: $main;}
+}
 .ornament-lit{
   background: $main;
   @extend .circle;
@@ -130,9 +152,17 @@ background: $light;
   box-shadow: -1vw -1vw 0 20vw $shadow;
   overflow: hidden;
   .dot-row{
-    top: 50%;
+    top: 40%;
   left: 0%;
   //  background: $light;
+  }
+  .dot-row2{
+    top: 65%;
+  left: 0%;
+  }
+  .dot-row3{
+    top:90%;
+    left: 0;
   }
   .dot{background: $light;}
 }
@@ -141,21 +171,107 @@ background: $light;
   position: absolute;
   width: 100%;
   height: 3vw;
-  
   z-index: 2;
   display: flex;
   display: -webkit-flex;
  justify-content: space-between;
 }
+.dot-row2{
+  @extend .dot-row;
+}
+.dot-row3{
+  @extend .dot-row;
+}
+.dot-row4{
+  @extend .dot-row;
+}
+.dot-row-top{
+  @extend .dot-row;
+}
 .dot{
   height: 2vw;
   width: 2vw;
   margin-top: .5vw;
-   border-radius: 50%;
-  
-  z-index: 3;
+   border-radius: 50%; 
 }
-/*@media (min-aspect-ratio: 1/8) {
+.chevron{
+  height: 4vw;
+  width: 20%;
+  box-sizing: border-box;
+}
+.chevron-l{
+  @extend .chevron;
+  transform: skew(-20deg);
+}
+.chevron-r{
+  @extend .chevron;
+  transform: skew(20deg)
+}
+.v-line{
+  height: 4vw;
+  width: 20%;
+   box-sizing: border-box;
+  
+}
+.ornament1{
+  @extend .ornament;
+  .dot-row{
+    box-sizing: border-box;
+    border-top: $main .25vw solid;
+  }
+  .dot-row-top{
+    top: 0%;
+  left: 0%;
+  }
+  .chevron-l, .chevron-r{
+     background: $main;
+    border: $shadow .25vw solid;
+  }
+ .v-line{
+   background: $main;
+    border: $shadow .25vw solid;
+  }
+}
+
+.ornament-lit1{
+  @extend .ornament-lit;
+  
+  .dot-row{
+    box-sizing: border-box;
+    border-top: $light .25vw solid;
+    
+    
+  }
+   .dot-row-top{
+    top: 25%;
+  left: 0%;
+  }
+   .chevron-l, .chevron-r{
+     background: $light;
+    border: $main .25vw solid;
+     
+  }
+  .v-line{
+    background: $light;
+    border: $main .25vw solid;
+  }
+ 
+}
+.ornament2{
+  @extend .ornament;
+}
+.ornament-lit2{
+  @extend .ornament-lit;
+}
+.ornament3{
+  @extend .ornament;
+}
+.ornament-lit3{
+  @extend .ornament-lit;
+}
+
+
+@media (min-aspect-ratio: 1/8) {
   .portrait-spacer {
     height: 25vw;
   }
@@ -164,4 +280,4 @@ background: $light;
   .portrait-spacer {
     height: 0px;
   }
-}*/
+}

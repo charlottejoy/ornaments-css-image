@@ -1,0 +1,259 @@
+body {
+  background: #F7F7F7;
+  overflow: hidden;
+  /* display: flex;
+   align-items: center;
+  justify-content: center;
+  height: 100%;
+   min-height: 100%;*/
+}
+
+.container {
+  height: 45vw;
+  width: 90vw;
+  margin: auto;
+  position: relative;
+  border: 2px solid black;
+}
+
+.circle, .hanger-circle, .inner-circle, .ornament, .ornament1, .ornament2, .ornament3, .ornament-lit, .ornament-lit1, .ornament-lit2, .ornament-lit3 {
+  border-radius: 50%;
+  position: absolute;
+}
+
+.string, .string1, .string2, .string3 {
+  background: #F72412;
+  position: absolute;
+  width: .5%;
+  top: -90%;
+}
+
+.string1 {
+  height: 110%;
+  left: 22.25%;
+}
+
+.ornament-space, .ornament-space1, .ornament-space2, .ornament-space3 {
+  height: 50%;
+  width: 25%;
+}
+
+.ornament-space1 {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+
+.ornament-space2 {
+  position: absolute;
+  top: 30%;
+  left: 37.5%;
+}
+
+.string2 {
+  height: 120%;
+  left: 49.75%;
+}
+
+.ornament-space3 {
+  position: absolute;
+  top: 10%;
+  left: 60%;
+}
+
+.string3 {
+  height: 100%;
+  left: 72.25%;
+}
+
+.hanger {
+  background: #040358;
+  position: absolute;
+  top: 10%;
+  left: 42%;
+  width: 16%;
+  height: 10%;
+  overflow: hidden;
+}
+
+.hanger-light {
+  background: #F72412;
+  top: 0%;
+  left: 20%;
+  height: 80%;
+  width: 90%;
+  position: absolute;
+  border-radius: 0 0 0 25%;
+  -ms-transform: skewX(15deg);
+  /* IE 9 */
+  -webkit-transform: skewX(15deg);
+  /* Safari */
+  transform: skewX(15deg);
+}
+
+.hanger-circle {
+  background: #F72412;
+  top: 0%;
+  left: 44%;
+  width: 12%;
+  height: 12%;
+}
+
+.inner-circle {
+  background: #F7F7F7;
+  top: 20%;
+  left: 20%;
+  width: 60%;
+  height: 60%;
+}
+
+.ornament, .ornament1, .ornament2, .ornament3 {
+  top: 20%;
+  left: 10%;
+  height: 80%;
+  width: 80%;
+  overflow: hidden;
+  background: #F7F7F7;
+}
+
+.ornament .dot-row, .ornament1 .dot-row, .ornament2 .dot-row, .ornament3 .dot-row, .ornament .dot-row2, .ornament1 .dot-row2, .ornament2 .dot-row2, .ornament3 .dot-row2, .ornament .dot-row3, .ornament1 .dot-row3, .ornament2 .dot-row3, .ornament3 .dot-row3, .ornament .dot-row4, .ornament1 .dot-row4, .ornament2 .dot-row4, .ornament3 .dot-row4, .ornament .dot-row-top, .ornament1 .dot-row-top, .ornament2 .dot-row-top, .ornament3 .dot-row-top {
+  top: 15%;
+  left: 0%;
+}
+
+.ornament .dot-row2, .ornament1 .dot-row2, .ornament2 .dot-row2, .ornament3 .dot-row2 {
+  top: 40%;
+  left: 0%;
+}
+
+.ornament .dot-row3, .ornament1 .dot-row3, .ornament2 .dot-row3, .ornament3 .dot-row3 {
+  top: 65%;
+  left: 0;
+}
+
+.ornament .dot-row4, .ornament1 .dot-row4, .ornament2 .dot-row4, .ornament3 .dot-row4 {
+  top: 90%;
+  left: 0%;
+}
+
+.ornament .dot, .ornament1 .dot, .ornament2 .dot, .ornament3 .dot {
+  background: #F72412;
+}
+
+.ornament-lit, .ornament-lit1, .ornament-lit2, .ornament-lit3 {
+  background: #F72412;
+  top: -25%;
+  left: 30%;
+  height: 100%;
+  width: 100%;
+  box-shadow: -1vw -1vw 0 20vw #040358;
+  overflow: hidden;
+}
+
+.ornament-lit .dot-row, .ornament-lit1 .dot-row, .ornament-lit2 .dot-row, .ornament-lit3 .dot-row, .ornament-lit .dot-row2, .ornament-lit1 .dot-row2, .ornament-lit2 .dot-row2, .ornament-lit3 .dot-row2, .ornament-lit .dot-row3, .ornament-lit1 .dot-row3, .ornament-lit2 .dot-row3, .ornament-lit3 .dot-row3, .ornament-lit .dot-row4, .ornament-lit1 .dot-row4, .ornament-lit2 .dot-row4, .ornament-lit3 .dot-row4, .ornament-lit .dot-row-top, .ornament-lit1 .dot-row-top, .ornament-lit2 .dot-row-top, .ornament-lit3 .dot-row-top {
+  top: 40%;
+  left: 0%;
+}
+
+.ornament-lit .dot-row2, .ornament-lit1 .dot-row2, .ornament-lit2 .dot-row2, .ornament-lit3 .dot-row2 {
+  top: 65%;
+  left: 0%;
+}
+
+.ornament-lit .dot-row3, .ornament-lit1 .dot-row3, .ornament-lit2 .dot-row3, .ornament-lit3 .dot-row3 {
+  top: 90%;
+  left: 0;
+}
+
+.ornament-lit .dot, .ornament-lit1 .dot, .ornament-lit2 .dot, .ornament-lit3 .dot {
+  background: #F7F7F7;
+}
+
+.dot-row, .dot-row2, .dot-row3, .dot-row4, .dot-row-top {
+  position: absolute;
+  width: 100%;
+  height: 3vw;
+  z-index: 2;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+}
+
+.dot {
+  height: 2vw;
+  width: 2vw;
+  margin-top: .5vw;
+  border-radius: 50%;
+}
+
+.chevron, .chevron-l, .chevron-r {
+  height: 4vw;
+  width: 20%;
+  box-sizing: border-box;
+}
+
+.chevron-l {
+  transform: skew(-20deg);
+}
+
+.chevron-r {
+  transform: skew(20deg);
+}
+
+.v-line {
+  height: 4vw;
+  width: 20%;
+  box-sizing: border-box;
+}
+
+.ornament1 .dot-row, .ornament1 .dot-row2, .ornament1 .dot-row3, .ornament1 .dot-row4, .ornament1 .dot-row-top {
+  box-sizing: border-box;
+  border-top: #F72412 0.25vw solid;
+}
+
+.ornament1 .dot-row-top {
+  top: 0%;
+  left: 0%;
+}
+
+.ornament1 .chevron-l, .ornament1 .chevron-r {
+  background: #F72412;
+  border: #040358 0.25vw solid;
+}
+
+.ornament1 .v-line {
+  background: #F72412;
+  border: #040358 0.25vw solid;
+}
+
+.ornament-lit1 .dot-row, .ornament-lit1 .dot-row2, .ornament-lit1 .dot-row3, .ornament-lit1 .dot-row4, .ornament-lit1 .dot-row-top {
+  box-sizing: border-box;
+  border-top: #F7F7F7 0.25vw solid;
+}
+
+.ornament-lit1 .dot-row-top {
+  top: 25%;
+  left: 0%;
+}
+
+.ornament-lit1 .chevron-l, .ornament-lit1 .chevron-r {
+  background: #F7F7F7;
+  border: #F72412 0.25vw solid;
+}
+
+.ornament-lit1 .v-line {
+  background: #F7F7F7;
+  border: #F72412 0.25vw solid;
+}
+
+@media (min-aspect-ratio: 1 / 8) {
+  .portrait-spacer {
+    height: 25vw;
+  }
+}
+
+@media (min-aspect-ratio: 5 / 4) {
+  .portrait-spacer {
+    height: 0px;
+  }
+}
