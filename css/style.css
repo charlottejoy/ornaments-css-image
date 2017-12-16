@@ -13,7 +13,6 @@ body {
   width: 90vw;
   margin: auto;
   position: relative;
-  border: 2px solid black;
 }
 
 .circle, .hanger-circle, .inner-circle, .ornament, .ornament1, .ornament2, .ornament3, .ornament-lit, .ornament-lit1, .ornament-lit2, .ornament-lit3 {
@@ -115,27 +114,22 @@ body {
   overflow: hidden;
   background: #F7F7F7;
 }
-
 .ornament .dot-row, .ornament1 .dot-row, .ornament2 .dot-row, .ornament3 .dot-row, .ornament .dot-row2, .ornament1 .dot-row2, .ornament2 .dot-row2, .ornament3 .dot-row2, .ornament .dot-row3, .ornament1 .dot-row3, .ornament2 .dot-row3, .ornament3 .dot-row3, .ornament .dot-row4, .ornament1 .dot-row4, .ornament2 .dot-row4, .ornament3 .dot-row4, .ornament .dot-row-top, .ornament1 .dot-row-top, .ornament2 .dot-row-top, .ornament3 .dot-row-top {
   top: 15%;
   left: 0%;
 }
-
 .ornament .dot-row2, .ornament1 .dot-row2, .ornament2 .dot-row2, .ornament3 .dot-row2 {
   top: 40%;
   left: 0%;
 }
-
 .ornament .dot-row3, .ornament1 .dot-row3, .ornament2 .dot-row3, .ornament3 .dot-row3 {
   top: 65%;
   left: 0;
 }
-
 .ornament .dot-row4, .ornament1 .dot-row4, .ornament2 .dot-row4, .ornament3 .dot-row4 {
   top: 90%;
   left: 0%;
 }
-
 .ornament .dot, .ornament1 .dot, .ornament2 .dot, .ornament3 .dot {
   background: #F72412;
 }
@@ -149,22 +143,18 @@ body {
   box-shadow: -1vw -1vw 0 20vw #040358;
   overflow: hidden;
 }
-
 .ornament-lit .dot-row, .ornament-lit1 .dot-row, .ornament-lit2 .dot-row, .ornament-lit3 .dot-row, .ornament-lit .dot-row2, .ornament-lit1 .dot-row2, .ornament-lit2 .dot-row2, .ornament-lit3 .dot-row2, .ornament-lit .dot-row3, .ornament-lit1 .dot-row3, .ornament-lit2 .dot-row3, .ornament-lit3 .dot-row3, .ornament-lit .dot-row4, .ornament-lit1 .dot-row4, .ornament-lit2 .dot-row4, .ornament-lit3 .dot-row4, .ornament-lit .dot-row-top, .ornament-lit1 .dot-row-top, .ornament-lit2 .dot-row-top, .ornament-lit3 .dot-row-top {
   top: 40%;
   left: 0%;
 }
-
 .ornament-lit .dot-row2, .ornament-lit1 .dot-row2, .ornament-lit2 .dot-row2, .ornament-lit3 .dot-row2 {
   top: 65%;
   left: 0%;
 }
-
 .ornament-lit .dot-row3, .ornament-lit1 .dot-row3, .ornament-lit2 .dot-row3, .ornament-lit3 .dot-row3 {
   top: 90%;
   left: 0;
 }
-
 .ornament-lit .dot, .ornament-lit1 .dot, .ornament-lit2 .dot, .ornament-lit3 .dot {
   background: #F7F7F7;
 }
@@ -206,21 +196,32 @@ body {
   box-sizing: border-box;
 }
 
+.diamond {
+  width: 3vw;
+  height: 3vw;
+  box-sizing: border-box;
+  transform: rotate(45deg);
+}
+
+.h-line {
+  position: absolute;
+  width: 100%;
+  height: 1vw;
+  top: 1.5vw;
+}
+
 .ornament1 .dot-row, .ornament1 .dot-row2, .ornament1 .dot-row3, .ornament1 .dot-row4, .ornament1 .dot-row-top {
   box-sizing: border-box;
   border-top: #F72412 0.25vw solid;
 }
-
 .ornament1 .dot-row-top {
-  top: 0%;
+  top: -10%;
   left: 0%;
 }
-
 .ornament1 .chevron-l, .ornament1 .chevron-r {
   background: #F72412;
   border: #040358 0.25vw solid;
 }
-
 .ornament1 .v-line {
   background: #F72412;
   border: #040358 0.25vw solid;
@@ -229,21 +230,50 @@ body {
 .ornament-lit1 .dot-row, .ornament-lit1 .dot-row2, .ornament-lit1 .dot-row3, .ornament-lit1 .dot-row4, .ornament-lit1 .dot-row-top {
   box-sizing: border-box;
   border-top: #F7F7F7 0.25vw solid;
+  left: -.25vw;
 }
-
 .ornament-lit1 .dot-row-top {
-  top: 25%;
+  top: 15%;
   left: 0%;
 }
-
 .ornament-lit1 .chevron-l, .ornament-lit1 .chevron-r {
   background: #F7F7F7;
   border: #F72412 0.25vw solid;
 }
-
 .ornament-lit1 .v-line {
   background: #F7F7F7;
   border: #F72412 0.25vw solid;
+}
+
+.ornament-lit2 .dot-row, .ornament-lit2 .dot-row2, .ornament-lit2 .dot-row3, .ornament-lit2 .dot-row4, .ornament-lit2 .dot-row-top {
+  left: -.07vw;
+}
+
+.ornament3 .dot-row-top {
+  top: 0%;
+  left: 0%;
+}
+.ornament3 .h-line {
+  background: #F72412;
+}
+.ornament3 .diamond {
+  border: #F72412 0.25vw solid;
+  box-shadow: 0 0 0 0.5vw #040358 inset, 0 0 0 0.75vw #F72412 inset;
+}
+
+.ornament-lit3 .dot-row-top {
+  top: 25%;
+  left: 1vw;
+}
+.ornament-lit3 .dot-row2 {
+  left: .65vw;
+}
+.ornament-lit3 .h-line {
+  background: #F7F7F7;
+}
+.ornament-lit3 .diamond {
+  border: #F7F7F7 0.25vw solid;
+  box-shadow: 0 0 0 0.5vw #F72412 inset, 0 0 0 0.75vw #F7F7F7 inset;
 }
 
 @media (min-aspect-ratio: 1 / 8) {
@@ -251,7 +281,6 @@ body {
     height: 25vw;
   }
 }
-
 @media (min-aspect-ratio: 5 / 4) {
   .portrait-spacer {
     height: 0px;
