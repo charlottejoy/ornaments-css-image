@@ -1,6 +1,6 @@
 A Pen created at CodePen.io. You can find this one at https://codepen.io/charlottejoy/pen/dJyEMJ.
 
-![ornaments_capture](https://user-images.githubusercontent.com/17909419/34066462-f816607a-e1dc-11e7-94ee-06032c0080bf.JPG)
+![screenshot](https://user-images.githubusercontent.com/17909419/34066504-99d30382-e1dd-11e7-9396-3ece312443db.png)
 
 
 * Playing with SCSS to create Christmas oranments. Based on https://dribbble.com/shots/4013569-Season-s-Greetings
