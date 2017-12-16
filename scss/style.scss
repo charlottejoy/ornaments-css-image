@@ -1,3 +1,4 @@
+
 $light: #F7F7F7;
 $main: #F72412;
 $shadow:#040358;
@@ -6,11 +7,13 @@ $container-height: 45vw;
 $ornament1-top: 20%;
 $ornament1-left: 10%;
 $ornament1-width: 25%;
+
 @mixin skewx-hanger($deg){
   -ms-transform: skewX($deg); /* IE 9 */
     -webkit-transform: skewX($deg); /* Safari */
     transform: skewX($deg);
 }
+
 body {
 background: $light;
   overflow: hidden;
@@ -46,10 +49,12 @@ background: $light;
   width: $ornament1-width;
 }
 .ornament-space1{
+   @extend .ornament-space;
   position: absolute;
   top: $ornament1-top;
   left: $ornament1-left;
- @extend .ornament-space;
+
+  animation: swing 4s linear infinite;
 }
 .ornament-space2{
   position: absolute;
@@ -117,9 +122,12 @@ background: $light;
   width: 80%;
   overflow: hidden;
   background: $light;
-  
+   .dot-row-top{
+    top: 0%;
+    left: 0%;
+  }
   .dot-row{
-    top: 15%;
+    top: 20%;
   left: 0%;
   
   }
@@ -128,11 +136,11 @@ background: $light;
   left: 0%;
   }
   .dot-row3{
-    top:65%;
+    top:60%;
     left: 0;
   }
   .dot-row4{
-    top: 90%;
+    top: 80%;
     left: 0%;
   }
   
@@ -147,8 +155,12 @@ background: $light;
   width: 100%;
   box-shadow: -1vw -1vw 0 20vw $shadow;
   overflow: hidden;
+  .dot-row-top{
+    top: 25%;
+  left: 0%; 
+  }
   .dot-row{
-    top: 40%;
+    top: 45%;
   left: 0%;
   }
   .dot-row2{
@@ -156,19 +168,22 @@ background: $light;
   left: 0%;
   }
   .dot-row3{
-    top:90%;
+    top:85%;
     left: 0;
   }
   .dot{background: $light;}
 }
-.dot-row{
+.dot-row-top{
   position: absolute;
   width: 100%;
-  height: 3vw;
+  height: 20%;
   z-index: 2;
   display: flex;
   display: -webkit-flex;
  justify-content: space-between;
+}
+.dot-row{
+@extend .dot-row-top;
 }
 .dot-row2{
   @extend .dot-row;
@@ -177,9 +192,6 @@ background: $light;
   @extend .dot-row;
 }
 .dot-row4{
-  @extend .dot-row;
-}
-.dot-row-top{
   @extend .dot-row;
 }
 .dot{
@@ -227,11 +239,6 @@ width: 3vw;
     box-sizing: border-box;
     border-top: $main .25vw solid;
   }
-  .dot-row-top{
-    top: -10%;
-  left: 0%;
-   
-  }
   .chevron-l, .chevron-r{
      background: $main;
     border: $shadow .25vw solid;
@@ -241,7 +248,6 @@ width: 3vw;
     border: $shadow .25vw solid;
   }
 }
-
 .ornament-lit1{
   @extend .ornament-lit;
   
@@ -251,10 +257,7 @@ width: 3vw;
     left: -.25vw;
     
   }
-   .dot-row-top{
-    top: 15%;
-  left: 0%;
-  }
+   
    .chevron-l, .chevron-r{
      background: $light;
     border: $main .25vw solid;
@@ -268,7 +271,7 @@ width: 3vw;
 }
 .ornament2{
   @extend .ornament;
-   
+  
 }
 .ornament-lit2{
   @extend .ornament-lit;
@@ -278,11 +281,7 @@ width: 3vw;
 }
 .ornament3{
   @extend .ornament;
-   .dot-row-top{
-    top: 0%;
-  left: 0%;
-   
-  }
+  
   .h-line{
      background: $main;
   }
@@ -294,12 +293,11 @@ width: 3vw;
 .ornament-lit3{
   @extend .ornament-lit;
  .dot-row-top{
-    top: 25%;
-  left: 1vw;
+  left: .5vw;
   }
-  .dot-row2{
+ /* .dot-row2{
       left: .65vw;
-  }
+  }*/
    .h-line{
      background: $light;
   }
@@ -320,3 +318,4 @@ width: 3vw;
     height: 0px;
   }
 }
+
